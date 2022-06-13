@@ -24,6 +24,7 @@ import static org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.beans.Beans;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -510,6 +511,7 @@ public class MonthViewDemo extends JPanel {
     public MonthViewDemo() {
         super(new BorderLayout());
         createMonthViewDemo();
+        Beans.setDesignTime(true);
         Application.getInstance().getContext().getResourceMap(getClass()).injectComponents(this);
         bind();
     }

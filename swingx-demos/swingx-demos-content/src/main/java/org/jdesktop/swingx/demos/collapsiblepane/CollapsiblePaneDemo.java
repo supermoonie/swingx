@@ -25,6 +25,7 @@ import java.awt.CardLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.beans.Beans;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -86,7 +87,7 @@ public class CollapsiblePaneDemo extends JPanel {
     
     public CollapsiblePaneDemo() {
         createCollapsiblePaneDemo();
-        
+        Beans.setDesignTime(true);
         Application.getInstance().getContext().getResourceMap(getClass()).injectComponents(this);
         
         bind();

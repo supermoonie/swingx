@@ -23,6 +23,7 @@ package org.jdesktop.swingx.demos.taskpane;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.beans.Beans;
 
 import javax.swing.JEditorPane;
 import javax.swing.JFrame;
@@ -90,7 +91,7 @@ public class TaskPaneDemo extends JPanel {
         super(new BorderLayout());
         
         createTaskPaneDemo();
-        
+        Beans.setDesignTime(true);
         Application.getInstance().getContext().getResourceMap(getClass()).injectComponents(this);
         
         bind();

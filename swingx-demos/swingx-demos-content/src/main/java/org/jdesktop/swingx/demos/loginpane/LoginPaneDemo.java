@@ -26,6 +26,7 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.beans.Beans;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -88,7 +89,7 @@ public class LoginPaneDemo extends JPanel {
         super(new BorderLayout());
         
         createLoginPaneDemo();
-        
+        Beans.setDesignTime(true);
         Application.getInstance().getContext().getResourceMap(getClass()).injectComponents(this);
         
         bind();

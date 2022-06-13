@@ -22,6 +22,7 @@ package org.jdesktop.swingx.demos.tipoftheday;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.beans.Beans;
 
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
@@ -89,7 +90,7 @@ public class TipOfTheDayDemo extends JPanel {
         super(new BorderLayout());
 
         createTipOfTheDayDemo();
-
+        Beans.setDesignTime(true);
         Application.getInstance().getContext().getResourceMap(getClass()).injectComponents(this);
 
         bind();

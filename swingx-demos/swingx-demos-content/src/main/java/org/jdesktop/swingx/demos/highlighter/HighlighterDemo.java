@@ -28,6 +28,7 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.beans.Beans;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -139,6 +140,7 @@ public class HighlighterDemo extends DefaultDemoPanel {
 
     @Override
     protected void createDemo() {
+        Beans.setDesignTime(true);
         setLayout(new BorderLayout());
         
         JTabbedPane tabbedPane = new JTabbedPane();

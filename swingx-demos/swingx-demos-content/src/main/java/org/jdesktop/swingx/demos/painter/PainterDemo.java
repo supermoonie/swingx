@@ -35,6 +35,7 @@ import java.awt.Shape;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.awt.image.BufferedImageOp;
+import java.beans.Beans;
 import java.util.logging.Logger;
 
 import javax.imageio.ImageIO;
@@ -257,6 +258,7 @@ public class PainterDemo extends JPanel {
     public PainterDemo() {
         super(new BorderLayout());
         createPainterDemo();
+        Beans.setDesignTime(true);
         Application.getInstance().getContext().getResourceMap(getClass()).injectComponents(this);
         bind();
     }

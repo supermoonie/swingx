@@ -8,6 +8,7 @@ import java.awt.Component;
 import java.awt.Window;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.ActionEvent;
+import java.beans.Beans;
 import java.util.logging.Logger;
 
 import javax.jnlp.ClipboardService;
@@ -77,6 +78,7 @@ public class DemoUtils {
      * the ResourceMap of the component's class.
      */
     public static void injectResources(Component comp) {
+        Beans.setDesignTime(true);
         Application.getInstance().getContext().getResourceMap(comp.getClass()).injectComponents(comp);
     }
 
@@ -105,6 +107,7 @@ public class DemoUtils {
      * 
      */
     public static String getResourceString(Class<?> baseClass, String key) {
+        Beans.setDesignTime(true);
         return Application.getInstance().getContext()
             .getResourceMap(baseClass).getString(key);
     }

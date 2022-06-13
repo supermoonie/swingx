@@ -26,6 +26,7 @@ import java.awt.LinearGradientPaint;
 import java.awt.MultipleGradientPaint;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.beans.Beans;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -85,7 +86,7 @@ public class GradientChooserDemo extends JXPanel {
         setBackgroundPainter(new MattePainter(gradient, true));
         
         createGradientChooserDemo();
-        
+        Beans.setDesignTime(true);
         Application.getInstance().getContext().getResourceMap(getClass()).injectComponents(this);
         
         bind();

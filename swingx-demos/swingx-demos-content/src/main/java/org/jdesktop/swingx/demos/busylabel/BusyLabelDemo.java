@@ -25,6 +25,7 @@ import static org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
+import java.beans.Beans;
 import java.util.Dictionary;
 import java.util.Hashtable;
 
@@ -99,7 +100,7 @@ public class BusyLabelDemo extends JXPanel {
         super(new BorderLayout());
         
         createBusyLabelDemo();
-        
+        Beans.setDesignTime(true);
         Application.getInstance().getContext().getResourceMap(getClass()).injectComponents(this);
         
         bind();

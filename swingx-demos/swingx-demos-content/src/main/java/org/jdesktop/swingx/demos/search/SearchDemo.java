@@ -12,6 +12,7 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.KeyboardFocusManager;
 import java.awt.event.ActionEvent;
+import java.beans.Beans;
 import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
@@ -93,6 +94,7 @@ public class SearchDemo extends JPanel {
         initComponents();
         initStringRepresentation();
         installCustomSearch();
+        Beans.setDesignTime(true);
         Application.getInstance().getContext().getResourceMap(getClass()).injectComponents(this);
         bind();
         installRenderers();

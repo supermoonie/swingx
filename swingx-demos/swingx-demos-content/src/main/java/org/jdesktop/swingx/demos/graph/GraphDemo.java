@@ -27,6 +27,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.geom.Point2D;
 import java.awt.geom.Rectangle2D;
+import java.beans.Beans;
 import java.text.NumberFormat;
 
 import javax.swing.JFormattedTextField;
@@ -86,7 +87,7 @@ public class GraphDemo extends JPanel {
         super(new BorderLayout());
 
         createGraphDemo();
-
+        Beans.setDesignTime(true);
         Application.getInstance().getContext().getResourceMap(getClass()).injectComponents(this);
 
         bind();

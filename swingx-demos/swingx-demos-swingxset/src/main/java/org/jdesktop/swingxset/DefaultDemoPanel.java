@@ -21,6 +21,7 @@
 package org.jdesktop.swingxset;
 
 import java.awt.Dimension;
+import java.beans.Beans;
 
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
@@ -107,6 +108,7 @@ public abstract class DefaultDemoPanel extends JXPanel {
      */
     protected void injectResources() {
         injectRan = true;
+        Beans.setDesignTime(true);
         Application.getInstance().getContext().getResourceMap(getClass()).injectComponents(this);
     }
     

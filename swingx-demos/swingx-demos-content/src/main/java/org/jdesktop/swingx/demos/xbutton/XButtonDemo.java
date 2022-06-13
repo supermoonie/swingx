@@ -21,6 +21,7 @@
 package org.jdesktop.swingx.demos.xbutton;
 
 import java.awt.Dimension;
+import java.beans.Beans;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -70,7 +71,7 @@ public class XButtonDemo extends JPanel {
     
     public XButtonDemo() {
         createBusyLabelDemo();
-        
+        Beans.setDesignTime(true);
         Application.getInstance().getContext().getResourceMap(getClass()).injectComponents(this);
         
         bind();

@@ -22,6 +22,7 @@ package org.jdesktop.swingx.demos.multisplitpane;
 
 import java.awt.Dimension;
 import java.awt.BorderLayout;
+import java.beans.Beans;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -75,7 +76,7 @@ public class MultiSplitPaneDemo extends JPanel {
     
     public MultiSplitPaneDemo() {
         createMultiSplitPaneDemo();
-        
+        Beans.setDesignTime(true);
         Application.getInstance().getContext().getResourceMap(getClass()).injectComponents(this);
         
         bind();
